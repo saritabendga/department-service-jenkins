@@ -39,4 +39,11 @@ public class DepartmentController {
         return ResponseEntity.status(HttpStatus.OK).body(departmentService.getDepartmentById(id));
     }
 
+    @DeleteMapping("/departments/delete/{id}")
+    public String deleteDepartmentbyId(@PathVariable("id") String id)
+    {
+        departmentService.deletebyId(id);
+        return "Employee record with" +id+ "deleted";
+    }
+
 }

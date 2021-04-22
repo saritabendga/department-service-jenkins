@@ -10,4 +10,5 @@ public interface DepartmentService {
     public Department createDepartment(Department department);
     public List<Department> displayAllDepartment();
     public Optional<Department> getDepartmentById(String id);
+    public void deletebyId(String id);
 }
